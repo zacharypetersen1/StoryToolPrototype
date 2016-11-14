@@ -1,0 +1,75 @@
+//Name: blah
+
+if(not isConv)
+{
+    if(distance_to_object(obj_player) < 100)
+    {
+        convCounter = 0;
+        isConv = true;
+        convInc = 100;
+        convStage = 0;
+        convSegment = 0;
+    }
+}
+
+else if(isConv)
+{
+
+        if(convStage == 0)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("Ahoy there!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 1;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 1)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("I've been hearin' talk about yeh Berwyn!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 2;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 2)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("Talk that yeh might be settin' sails for the high seas!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 3;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 3)
+        {
+        	isConv = false;
+        }
+
+}
+//Name: blah
+
+//Name: blah
+
+//Name: blah
+
+//Name: blah
+
+//Name: blah
+

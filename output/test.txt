@@ -1,0 +1,49 @@
+//Name: test
+
+if(not isConv)
+{
+    if(distance_to_object(obj_player) < 100)
+    {
+        convCounter = 0;
+        isConv = true;
+        convInc = 100;
+        convStage = 0;
+        convSegment = 0;
+    }
+}
+
+else if(isConv)
+{
+
+        if(convStage == 0)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Hi there!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 1;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 1)
+        {
+        	isConv = false;
+        }
+
+}
+//Name: test
+
+//Name: test
+
+//Name: test
+
+//Name: test
+
+//Name: test
+
+//Name: test
+

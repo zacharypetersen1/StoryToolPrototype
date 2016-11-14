@@ -1,0 +1,369 @@
+//Name: main
+
+if(not isConv)
+{
+    if(distance_to_object(obj_player) < 100)
+    {
+        convCounter = 0;
+        isConv = true;
+        convInc = 100;
+        convStage = 0;
+        convSegment = 0;
+    }
+}
+
+else if(isConv)
+{
+
+        if(convStage == 0)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Ahoy there Berwyn!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 1;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 1)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("I've been hearing things about yeh...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 2;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 2)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("...talk that ye be setting sail...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 3;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 3)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("...for the high seas.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 4;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 4)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("Aye, what you hear is true.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 5;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 5)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("My crew and I set out tomorrow.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 6;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 6)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Ah, I see.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 7;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 7)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("And how do yeh feel abou' this journey?");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 8;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 8)
+        {
+            with(obj_player)
+            {
+                graphic_drawChoice("Nervous", "Excited", "Confused");
+            }
+            if(keyboard_check_pressed(vk_up))
+                convStage = 9;
+            if(keyboard_check_pressed(vk_left))
+                convStage = 16;
+            if(keyboard_check_pressed(vk_right))
+                convStage = 22;
+        }
+
+        if(convStage == 9)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("To be honest, I am nervous...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 10;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 10)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Aye, and rightly so.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 11;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 11)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("But I wouldn't worry Berwyn...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 12;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 12)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Yehr a good man.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 13;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 13)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("I'm certain yehr voyage will be profitable");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 14;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 14)
+        {
+        	isConv = false;
+        }
+
+        if(convStage == 16)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("I can't wait to set out!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 17;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 17)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Aye! That's the spirit!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 18;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 18)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("I'm certain yeh have a great adventure...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 19;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 19)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("...ahead of yeh!");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 20;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 20)
+        {
+        	isConv = false;
+        }
+
+        if(convStage == 22)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("There is so much to do...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 23;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 23)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("I can't keep it all strait in my mind...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 24;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 24)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Ah.. I see. Wory not Berwyn,");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 25;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 25)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Yehr not the firs' to feel this way.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 26;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 26)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("Jus' take things one step at a time...");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 27;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 27)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("....and yeh'll be fine.");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 28;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 28)
+        {
+        	isConv = false;
+        }
+
+}

@@ -1,0 +1,103 @@
+//Name: sterling
+
+if(not isConv)
+{
+    if(distance_to_object(obj_player) < 100)
+    {
+        convCounter = 0;
+        isConv = true;
+        convInc = 100;
+        convStage = 0;
+        convSegment = 0;
+    }
+}
+
+else if(isConv)
+{
+
+        if(convStage == 0)
+        {
+            with(obj_pirateA)
+            {
+                graphic_drawText("What do you want to eat Sterling?");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 1;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 1)
+        {
+            with(obj_player)
+            {
+                graphic_drawChoice("Pizza", "Salad", "Burger");
+            }
+            if(keyboard_check_pressed(vk_up))
+                convStage = 2;
+            if(keyboard_check_pressed(vk_left))
+                convStage = 5;
+            if(keyboard_check_pressed(vk_right))
+                convStage = 8;
+        }
+
+        if(convStage == 2)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("I want to eat Pizza");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 3;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 3)
+        {
+        	isConv = false;
+        }
+
+        if(convStage == 5)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("I want to eat some shitty salad");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 6;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 6)
+        {
+        	isConv = false;
+        }
+
+        if(convStage == 8)
+        {
+            with(obj_player)
+            {
+                graphic_drawText("I want to eat a cow");
+            }
+            convCounter++;
+            if(convCounter >= 60)
+        	{
+                convStage = 9;
+                convCounter = 0;
+        	}
+        }
+
+        if(convStage == 9)
+        {
+        	isConv = false;
+        }
+
+}
